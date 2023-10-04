@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Dice Program</title>
+    <script>
+        function initialize(){
+            outputDiv = document.getElementById("test_div");
+            roll1 = Math.floor(Math.random()* 6) + 1;
+            roll2 = Math.floor(Math.random()* 6) + 1;
+        }
+
+        function rollDice(){
+            roll1 = Math.floor(Math.random()* 6) + 1;
+            roll2 = Math.floor(Math.random()* 6) + 1;
+            display();
+        }
+
+        function display(){
+            var total = roll1 + roll2;
+            outputDiv.innerHTML = "Roll 1: " + roll1 + " and Roll 2: " + roll2 + " | Total: " + total;
+        }
+
+
+    </script>
+</head>
+<body onload = "initialize();">
+    <button onclick = "rollDice();">Roll Two Dice</button>
+    <div id = "test_div">
+        You have not clicked the button yet.
+    </div>
+
+</body>
+</html>
